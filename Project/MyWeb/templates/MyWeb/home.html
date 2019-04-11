@@ -1,0 +1,18 @@
+{% extends "MyWeb/basic.html" %}
+{% block content %}
+    {% for news in news %}
+        <article class="media content-section">
+          <div class="media-body">
+	    <h2><a class="article-title" href="#">{{ news.title }}</a></h2>
+            <div class="article-metadata">
+              <div class="text-muted">{{ news.date_posted }}</div>
+            </div>
+            <p class="article-content">{{ news.content }}</p>
+	    <div class="article-metadata">
+	    <a class="mr-5" href="#">{{ news.author }}</a>
+	    </div>
+
+          </div>
+        </article>
+    {% endfor %}
+{% endblock content %}
